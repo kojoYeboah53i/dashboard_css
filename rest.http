@@ -1,0 +1,8 @@
+
+###
+POST https://api.github.com/repos/:owner/:repo/issues/:issue_number/comments
+Content-Type: application/json
+
+{
+  "body": "Me too"
+}
