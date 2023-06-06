@@ -45,5 +45,5 @@ closeButton.addEventListener('click', () => {
 themeToggler.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme-variables');
 
-    themeToggler.
+    // themeToggler.
 });
