@@ -418,15 +418,25 @@ main .recent-order h2 {
 main .recent-order table {
     background-color: var(--color-white) ;
     width: 100%;
-    border-radius: var(--card-border-radius);
-    padding: var(--card-padding);
+    border-radius: var(--border-radius-1);
+    padding: 2rem 0 3rem 4rem;
     text-align: center;
     box-shadow: var(--card-shadow);
     transition: all 300ms ease;
+    height: 43vh;
+    overflow-y: scroll;
+    /* display: none; */
+    
 }
 
 main .recent-order table:hover{
     box-shadow: none;
+}
+main table thead tr {
+    /* padding: var(--card-padding); */
+    display: none;
+
+
 }
 
 main table tbody td {
@@ -723,8 +733,13 @@ main .recent-order a {
     main .recent-order table {
         margin: 0;
         width: 100%;
+        /* padding: 2rem 2rem 3rem 3rem; */
 
     }
+
+    /* main .recent-order table thead {
+        /* padding: var(--card-padding); *
+    } */
 
     .right {
         width: 94%;

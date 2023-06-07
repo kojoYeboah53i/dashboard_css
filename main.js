@@ -45,5 +45,29 @@ closeButton.addEventListener('click', () => {
 themeToggler.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme-variables');
 
-    // themeToggler.
+    themeToggler.querySelector('span').classList.toggle('active');
 });
+
+
+const getEmployees = async () => {
+    const url = `https://freedom-green.herokuapp.com/api/getEmployersEmployees/5`;
+    let res  = await axios.get(url)
+    const employees = await  res.data.employees;
+    console.log(employees);
+    
+    employees.forEach(employee => {
+        const tr = document.createElement('tr');
+        const trContent = `
+            <td>${employee.department}</td>
+            <td>${employee.name}</td>
+            <td>${employee.email}</td>
+            <td>${employee.job_title}</td>
+            <td class="${employee.verified === false ?  'danger' :  employee.verified === true ? 'primary' : 'warning' }">
+            ${employee.verified}</td>
+        `;
+        tr.innerHTML = trContent;
+        document.querySelector('table tbody').appendChild(tr);
+    });
+}
+
+getEmployees();
