@@ -1,3 +1,47 @@
+/*************************************************************** 
+ * 
+ *  THE IDEA WAS TO USE THE FIRST CALL TO DOCUMENT READY FUNCTION WAS TO REFRESH THE DATA FROM THE API
+ * 
+ *   i was going to do this by using the URLSearchParams() built in function inside ES6 update the employer
+ *   
+ * 
+ *   this is because this url will be a redirect the first time it loads
+ *   so I need dummy data to load the dom as if the data was real
+ * 
+ *  I already succeeded with getting the table data
+ * 
+ *  june 29 2023, heritorslabs east legon, Ghana
+
+
+
+
+**************************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const fetchWeather = async (city) => {
 //     //get weather data from api
 //     const headers = {
