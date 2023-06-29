@@ -32,6 +32,21 @@ const sideMenu = document.querySelector('aside');
 const menuButton = document.querySelector('#menu-btn');
 const closeButton = document.querySelector('#close-btn');
 const themeToggler = document.querySelector('.theme-toggler');
+const addEmployee = document.querySelector('#add_employee');
+const employeeModal = document.querySelector('.employee-modal');
+const closeEmployeeModal = document.querySelector('#close-employee-modal');
+// const inputFirstName = document.querySelector('input#first_name');
+// const inputPhone = document.querySelector('input#phone');
+// const inputEmail = document.querySelector('input#email');
+// let firstNameVal = '';
+// let phoneVal = '';
+// let emailVal = '';
+
+// inputFirstName.addEventListener('keyup', () => {
+// return firstNameVal = inputFirstName.value;
+// });
+
+
 
 menuButton.addEventListener('click', () => {
     sideMenu.style.display = 'block' ;
@@ -71,3 +86,60 @@ const getEmployees = async () => {
 }
 
 getEmployees();
+
+// add employee
+addEmployee.addEventListener('click', () => {
+    // alert('add employee');
+    employeeModal.style.display = 'block';
+});
+
+closeEmployeeModal.addEventListener('click', () => {
+    employeeModal.style.display = 'none' ;
+ 
+});
+
+const setOTP = async () => {
+
+    try {
+
+
+    const url = `https://freedom-green.herokuapp.com/api/setOTP`;
+   let res = await fetch(url, {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        },
+        body: JSON.stringify({ 
+          "email": "kojoyeboah@mail.com",
+          "zip": 1762,
+        
+         })
+      })
+
+      let data = await res.json();
+        console.log(data);
+    }catch(err) {
+        console.log(err);
+    }
+
+    };
+
+    //add style to sendPhone
+//     sendPhone.addEventListener('click', () => {
+//         alert('send phone');
+
+//     console.log(firstNameVal);
+//     // console.log(inputPhone);
+//     // console.log(inputEmail);
+
+// // const validateEmail = (email) => {
+// //     const re = /\S+@\S+\.\S+/;
+// //     return re.test(email);
+// // }
+
+// // const validatePhone = (phone) => {
+// //     const re = /^[0-9]{10}$/;
+// //     return re.test(phone);
+// // }
+//     });

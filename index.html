@@ -29,7 +29,7 @@
         </div>
 
             <div class="sidebar">
-                <a href="#">
+                <a href="#" class="active">
 
                     <span class="material-symbols-sharp">
                         apps
@@ -51,7 +51,7 @@
                 </span>
                 <h3>Profile</h3>
                 </a>
-                <a href="#" class="active">
+                <a href="#" class="">
                 <span class="material-symbols-sharp">
                     settings
                 </span>
@@ -81,7 +81,7 @@
                     <span class="material-icons-sharp">analytics </span>
                     <div class="middle">
                         <div class="left">
-                            <h3>Total Sales</h3>
+                            <h3>Total Employees</h3>
                             <h1>$25,023</h1>
                         </div>
                         <div class="progress">
@@ -153,18 +153,18 @@
             </div>
 
             <div class="recent-order">
-                <h2>Recent Orders</h2>
+                <h2>Recent Employees</h2>
                 
-                <table>
+                <table class="px-4">
                     <thead>
                         <tr>
-                            <!-- <th>Job Title</th> -->
+                            <th>Job Title</th>
                             <th>Department</th>
                             <th>Employee Name</th>
                             <th>Email</th>
                             <th>Job Title</th>
                             <th>Verified</th>
-                            <!-- <th>Details</th> -->   
+                            <th>Details</th>   
                         </tr>
                     </thead>
                     <tbody>
@@ -206,43 +206,9 @@
             </div>
             <!-- ----- end of top---------- -->
 
-             <div class="recent-updates">
-                <h2>Recent updates</h2>
-                <div class="updates">
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="./images/profile-2.jpg" alt="" srcset="">
-                        </div>
-                        <div class="message">
-                            <p> <b>Joe Rogan</b> recieved his order of samsung galaxy</p>
-                            <small class="text-muted"> 2 minutes ago</small>
-                        </div>
-                    </div>
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="./images/profile-3.jpg" alt="" srcset="">
-                        </div>
-                        <div class="message">
-                            <p> <b>Joe Rogan</b> recieved his order of samsung galaxy</p>
-                            <small class="text-muted"> 2 minutes ago</small>
-                        </div>
-                    </div>
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="./images/profile-4.jpg" alt="" srcset="">
-                        </div>
-                        <div class="message">
-                            <p> <b>Joe Rogan</b> recieved his order of samsung galaxy</p>
-                            <small class="text-muted"> 2 minutes ago</small>
-                        </div>
-                    </div>
-                </div>
-             </div>
-
-
-             <!-- ---------------- end of recent updates ----------------- -->
+ <!-- ---------------- end of recent updates ----------------- -->
              <div class="sales-analytics">
-                <h2> Sales Analytics</h2>
+                <h2> Employees on Ordable </h2>
                 <div class="item online">
 
                     <div class="icon">
@@ -250,7 +216,7 @@
                     </div>
                     <div class="right">
                         <div class="info">
-                            <h3>Online Item</h3>
+                            <h3>Online Employees</h3>
                             <small class="text-muted"> last 24 hours</small>
                         </div>
                         <h5 class="success">
@@ -286,7 +252,7 @@
                     </div>
                     <div class="right">
                         <div class="info">
-                            <h3>New Customers</h3>
+                            <h3>Newly Added</h3>
                             <small class="text-muted"> last 24 hours</small>
                         </div>
                         <h5 class="success">
@@ -296,10 +262,10 @@
                     </div>
                     
                 </div>
-                <div class="item add-product" >
+                <div class="item add-product" id="add_employee" >
                     <div>
                         <span class="material-icons-sharp">add </span>
-                        <h3> add product</h3>
+                        <h3> add new employee</h3>
                     </div>
                 </div>
 
@@ -308,8 +274,131 @@
 
                 </div>
 
+                <div class="recent-updates">
+                    <h2>Recent updates</h2>
+                    <div class="updates">
+                        <div class="update">
+                            <div class="profile-photo">
+                                <img src="./images/profile-2.jpg" alt="" srcset="">
+                            </div>
+                            <div class="message">
+                                <p> <b>Joe Rogan</b> recieved his order of samsung galaxy</p>
+                                <small class="text-muted"> 2 minutes ago</small>
+                            </div>
+                        </div>
+                        <div class="update">
+                            <div class="profile-photo">
+                                <img src="./images/profile-3.jpg" alt="" srcset="">
+                            </div>
+                            <div class="message">
+                                <p> <b>Joe Rogan</b> recieved his order of samsung galaxy</p>
+                                <small class="text-muted"> 2 minutes ago</small>
+                            </div>
+                        </div>
+                        <div class="update">
+                            <div class="profile-photo">
+                                <img src="./images/profile-4.jpg" alt="" srcset="">
+                            </div>
+                            <div class="message">
+                                <p> <b>Joe Rogan</b> recieved his order of samsung galaxy</p>
+                                <small class="text-muted"> 2 minutes ago</small>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+    
+    
+                
+
            </div>
 
+    </div>
+
+    <div class= "employee-modal  w-screen h-screen  bg-gray-800 dark:bg-gray-400 dark:bg-opacity-10 absolute top-0 left-0.5  bg-opacity-60">
+        <div class="modal-content text-center mx-auto">
+            <div class="top w-full flex justify-between items-center gap-4 px-2">
+                <span class="text-xl  flex items-center"> Verify Phone</span>
+                <span class="material-icons-sharp " id="close-employee-modal">close</span>
+            </div>
+            <div class="modal-body p-4">
+                <div class="relative z-0 w-10/12 mb-6 group w-full  mt-8">
+                    <input
+                      type="text"
+                      name="firstname"
+                      id="firstname"
+                                  
+                           class="input w-full p-2 border-0  border-b-2  outline-none opacity-50 focus:border-green-200
+                         mt-2 text-lg  appearance-none text-gray-800 bg-white bg-green-100 p-4"
+                        placeholder="Firstname"
+                    
+                      required
+                    />
+                    <span class="material-icons-sharp  absolute right-2 top-5"> person </span>
+                     <!-- {/* <FontAwesomeIcon className={` ${isHover ? 'text-customGreen-200' : 'text-gray-400'}   absolute right-2 top-5`} icon={faAt } style={{fontSize: '1rem'}}/>  */} -->
+                     <!-- <FontAwesomeIcon className={`icon text-gray-400  absolute right-2 top-5`} icon={faAt } style={{fontSize: '1rem'}}/>  -->
+
+
+                    <label For="floating_email"
+                      class="peer-focus:font-bold absolute text-sm text-gray-500  duration-300 transform -translate-y-6  top-1 -z-10  left-2  peer-focus:text-green-200  "
+                    >
+                      Firstname
+                    </label>
+                  </div>
+
+                  <div class="relative z-0 w-10/12 mb-6 group w-full  mt-8">
+                    <input
+                      type="number"
+                      name="phone"
+                      id="phone"
+                                  
+                           class="input w-full p-2 border-0  border-b-2  outline-none opacity-50 focus:border-green-200
+                         mt-2 text-lg  appearance-none text-gray-800 bg-white bg-green-100 p-4"
+                        placeholder="phone"
+                    
+                      required
+                    />
+                    <span class="material-icons-sharp  absolute right-2 top-5"> call </span>
+                     <!-- {/* <FontAwesomeIcon className={` ${isHover ? 'text-customGreen-200' : 'text-gray-400'}   absolute right-2 top-5`} icon={faAt } style={{fontSize: '1rem'}}/>  */} -->
+                     <!-- <FontAwesomeIcon className={`icon text-gray-400  absolute right-2 top-5`} icon={faAt } style={{fontSize: '1rem'}}/>  -->
+
+
+                    <label For="floating_email"
+                      class="peer-focus:font-bold absolute text-sm text-gray-500  duration-300 transform -translate-y-6  top-1 -z-10  left-2  peer-focus:text-green-200  "
+                    >
+                      phone
+                    </label>
+                  </div>
+
+   
+
+
+                  <div class="relative z-0 w-10/12 mb-6 group w-full  mt-8">
+                    <input
+                    type="text"
+                    name="role"
+                    id="role"
+                                
+                         class="input w-full p-2 border-0  border-b-2  outline-none opacity-50 focus:border-green-200
+                       mt-2 text-lg  appearance-none text-gray-800 bg-green-200  p-4"
+                      placeholder="email"required/>
+          
+                    <span class="material-icons-sharp  absolute right-2 top-5"> alternate_email </span>
+               
+
+                    <label For="floating_email"
+                      class="peer-focus:font-bold absolute text-sm text-gray-500  duration-300 transform -translate-y-6  top-1 -z-10  left-2  peer-focus:text-green-200  "
+                    >
+                      email
+                    </label>
+                  </div>
+            </div>
+            <div class="submit-form p-4 flex justify-between text-center">
+                <button class="cancel  shadow-2xl hover:shadow-none">cancel</button>
+                <button class="confirm"> confirm</button>
+
+            </div>
+
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 

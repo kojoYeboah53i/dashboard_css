@@ -1,0 +1,284 @@
+body{
+    background-color: var(--color-light);
+  }
+  
+
+  body .wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 14rem 58rem auto;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    background-color: var(--color-white);
+    position: relative;
+    /* margin-top: -2rem; */
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+  
+  }
+
+  body .wrapper aside{
+    position: relative;
+    top: 0;
+    left: -1.1rem;
+    /* margin-top: 0.6rem; */
+  }
+
+  
+  body .wrapper  .wallpaper{
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100% ;
+    /* padding: var(--padding-1); */
+    position: relative;
+    right: 10;
+ 
+  }
+  
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge add Firefox */
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+  }
+
+
+
+  
+  body .wrapper .form-background{
+      margin-top: 3rem;
+      width:  100%;
+      height: 80vh;
+      overflow: hidden;
+      overflow-y: scroll;
+      margin: auto auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      /* background-color: var(--color-light); */
+      padding: 1rem 1.5rem;
+      position: relative;
+      top: 0;
+      border-radius: 14px;
+  
+      -ms-overflow-style: none;
+      scrollbar-width: none; 
+      border: 2px Solid brown;
+      /* display: none; */
+  }
+
+  
+  
+  body .wrapper .form-background .sign-up-employee .brand{
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: var(--padding-1);
+  }
+  
+  body .wrapper .form-background .sign-up-employee .brand h1{
+    font-weight: 200;
+  
+  }
+  body .wrapper .form-background  form {
+      /* background-color: var(--primary-color);   html body div.h-screen.ws-creen.overflow-hidden div.form-background form  */
+      width: 100%;
+      padding: 1.2rem 1rem;
+      margin: 0 auto;
+      text-align: center;
+      /* margin-top: 2rem; */
+      display: block;
+      background-color: var(--color-light);
+      /* box-shadow: 0 0 0.2rem 0.1rem var(--color-dark); */
+      height: auto;
+      /* border: solid 1px var(--color-success); */
+      border-radius: 1.4rem;
+      scale: 0.6;
+      position: absolute;
+      top: -10rem;
+      left: 0;
+  
+  
+  
+  }
+  
+
+  
+  .form-background form div.name{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 1rem;
+  
+  }
+  
+  div.form-background form div.name div.form-group  input {
+      display: inline-block;
+      background-color: var(color-default-green-lighter);
+      color: var(--color-primary-variant);
+      border-radius: var(--border-radius-1);
+      width: 100%;
+      font-size: 1.8rem;
+      margin: 0 auto;
+      padding: 0.2rem 0.4rem;
+      height: 80%;
+      border: none;
+      border-bottom: solid 1px var(--color-dark);
+      outline: none;
+      transition: all 0.3s ease-in-out;
+  
+  
+  
+  
+  }
+  
+  div.form-background form div.name div.form-group  input:focus {
+    outline: inherit;
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: solid 4px var(--primary-color);
+  
+  }
+  
+  
+   div.form-background form  label {
+      display: flex;
+      justify-content: flex-start;
+      font-size: 1.3rem;
+      font-weight: 400;
+      /* margin-left: 1.4rem; */
+      margin-bottom: 0.4rem;
+      margin-top: 0.7rem;
+      width: 100%;
+      color: var(--color-dark);
+  }
+  
+  
+  input:not(:placeholder-shown) {
+      color: var(--color-dark);
+    }
+    
+    input:placeholder-shown {
+      color: var(--color-dark);
+    }
+  
+    .form-background form div.address {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 1rem;
+    }
+  
+    .form-background form div.address input {
+      display: inline-block;
+      background-color: var(color-default-green-lighter);
+      color: var(--color-primary-variant);
+      border-radius: var(--border-radius-1);
+      width: 100%;
+      font-size: 1.8rem;
+      margin: 0 auto;
+      padding: 0.8rem 1rem;
+      height: 80%;
+      border: none;
+      border-bottom: solid 1px var(--color-dark);
+      outline: none;
+      transition: all 0.3s ease-in-out;
+  
+    }
+  
+    .form-background form div.address input:focus {
+      outline: inherit;
+      border-color: inherit;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-bottom: solid 4px var(--primary-color);
+  
+    }
+  
+    .conclusion{
+      /* background-color: var(--color-info); */
+      position: relative;
+      margin-top: 3rem;
+      text-align: center;
+      padding: 0.8rem 1.5rem;
+      margin: 0 auto;
+      width: 94%;
+      border-radius: 0.5rem;
+      height: 13%;
+      text-align: center;
+    
+    }
+  
+    .submit-data{
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      width: 90%;
+      position: relative;
+        top: 1rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    .submit-data button{
+      border-radius: var(--border-radius-2);
+      width: 60%;
+      font-size: 1.4rem;
+      margin: 0 auto;
+      padding: 0.8rem 0.2rem;
+      height: 80%;
+      border: none;
+      cursor: pointer;
+    }
+  
+    .submit-data button.cancel{
+      background-color: var(--color-white);
+      color: var(--primary-color);
+      border: solid 1px var(--primary-color);
+    }
+  
+    .submit-data button.confirm{
+      background-color: var(--primary-color);
+      color: var(--color-white);
+    }
+  
+    .submit-data button.cancel:hover{
+      background-color: var(--color-default-green-light);
+      color: var(--primary-color);
+      border: solid 1px var(--primary-color);
+    }
+  
+    .submit-data button.confirm:hover{
+      background-color: var(--color-default-green-dark);
+      color: var(--color-white);
+    }
+    
+    body .employee-wallpaper {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-light);
+    }
+
+    body .employee-wallpaper img{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius:  0 15px 15px 0;
+      
+      }
+  
