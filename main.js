@@ -27,6 +27,122 @@
 
 // fetchWeather('London');
 
+//document get ready
+// const site_url = `${window.location}?employerId=28`;
+// console.log(site_url);
+
+
+// const queryParams = new URLSearchParams(site_url.search);
+// for (const [key, value] of queryParams.entries()) {
+//  console.log(`${key}, ${value}`);
+// }
+
+
+
+console.log("document is ready let see url ")
+const getEmployerDetails =  async (url) => {
+console.log("async waiting employer details ")
+
+const searchParams = await new URLSearchParams(url.search);
+let userId;
+
+for  (const [key, value] of searchParams.entries()) {
+  if (key == 'employer_id') {
+    userId = value;
+    break;
+  }
+    console.log("no employer id found");
+}
+
+ console.log('userId / employer_id');
+ await console.log(userId);
+
+} 
+
+
+
+console.log("employer id found")
+document.addEventListener("DOMContentLoaded", function() {
+
+    console.log("document is ready now ")
+    let app_url = window.location 
+
+    const site_url = `${app_url}?employer_id=28`;
+    console.log("site url is ")
+    console.log(site_url);
+
+    getEmployerDetails(site_url)
+    // get url URLSearchParams
+    // var getUrlParameter = function getUrlParameter(sParam) {
+    //     var sPageURL = window.location.search.substring(1),
+    //         sURLVariables = sPageURL.split('&'),
+    //         sParameterName,
+    //         i;
+    
+    //     for (i = 0; i < sURLVariables.length; i++) {
+    //         sParameterName = sURLVariables[i].split('=');
+    
+    //         if (sParameterName[0] === sParam) {
+    //             return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+    //         }
+    //     }
+    //     return false;
+    // };
+    let employerId = 28;
+
+  
+
+    
+    // for (const [key, value] of queryParams.entries()) {
+    //     if (key === 'employerId') {
+    //         employerId = +value;
+    //         break;
+    //     }
+    //   }
+
+
+    //   for (const [key, value] of queryParams.entries()) {
+    //     console.log("attempting to get employerId from url")
+
+    //     if (key === 'employerId') {
+    //         employerId = +value;
+    //         console.log("employer id found")
+    //         console.log(employerId)
+    //         break;
+    //     }
+    //   }
+     
+    //   console.log('type of employerId')
+    // console.log(typeof(employerId))
+    // console.log('typed cast')
+    // console.log(typeof(+employerId))
+    // const employer_Id = +employerId;
+    // console.log(+employer_Id);
+    console.log("this is where the employer actually becomes a number")
+    console.log(typeof(employerId))
+    const api_url = `https://freedom-green.herokuapp.com/api/getEmployersEmployees/${employerId}`
+    // fetch(api_url)
+
+    // .then(res => {
+    //     let response = res.data;
+    //     console.log(response)
+    //     console.log("the employer")
+    //     // console.log(response.employer)
+    //     // { employer } = response
+    // })
+    // .catch((error) => {
+    //     const errorCode = error.code;
+    //     const errorMessage = error.message;
+    //     console.log(errorCode, errorMessage);
+    // })
+
+
+
+
+    //    --- end of document ready function-----
+
+  });
+
 
 const sideMenu = document.querySelector('aside');
 const menuButton = document.querySelector('#menu-btn');
@@ -85,7 +201,7 @@ const getEmployees = async () => {
     });
 }
 
-getEmployees();
+// getEmployees();
 
 // add employee
 addEmployee.addEventListener('click', () => {
