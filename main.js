@@ -108,14 +108,16 @@ for  (const [key, value] of searchParams.entries()) {
 console.log("employer id found")
 document.addEventListener("DOMContentLoaded", function() {
 
+    const employerName = document.querySelector('#name_employer');
+
     console.log("document is ready now ")
     let app_url = window.location 
 
-    const site_url = `${app_url}?employer_id=28`;
-    console.log("site url is ")
-    console.log(site_url);
+    const site_url = window.location;
+    // console.log("site url is ")
+    // console.log(site_url);
 
-    getEmployerDetails(site_url)
+    // getEmployerDetails(site_url)
     // get url URLSearchParams
     // var getUrlParameter = function getUrlParameter(sParam) {
     //     var sPageURL = window.location.search.substring(1),
@@ -140,21 +142,21 @@ document.addEventListener("DOMContentLoaded", function() {
     // for (const [key, value] of queryParams.entries()) {
     //     if (key === 'employerId') {
     //         employerId = +value;
-    //         break;
+    //         break;  name_employer
     //     }
     //   }
 
 
-    //   for (const [key, value] of queryParams.entries()) {
-    //     console.log("attempting to get employerId from url")
+      for (const [key, value] of queryParams.entries()) {
+        console.log("attempting to get employerId from url")
 
-    //     if (key === 'employerId') {
-    //         employerId = +value;
-    //         console.log("employer id found")
-    //         console.log(employerId)
-    //         break;
-    //     }
-    //   }
+        if (key === 'employerId') {
+            employerId = +value;
+            console.log("employer id found")
+            console.log(employerId)
+        }
+        
+      }
      
     //   console.log('type of employerId')
     // console.log(typeof(employerId))
